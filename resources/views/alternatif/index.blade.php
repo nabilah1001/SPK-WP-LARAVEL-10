@@ -23,10 +23,10 @@
                     <tr align="center">
                         <th width="5%">No</th>
                         <th>Nama</th>
-                        <th>R.Pend</th>
+                        {{-- <th>R.Pend</th>
                         <th>Pengalaman</th>
                         <th>Status</th>
-                        <th>Usia</th>
+                        <th>Usia</th> --}}
                         <th width="15%">Aksi</th>
                     </tr>
                 </thead>
@@ -38,14 +38,19 @@
                         <tr align="center">
                             <td>{{ $no }}</td>
                             <td class="text-left">{{ $data->nama }}</td>
-                            <td class="text-left">{{ $data->pendidikan }}</td>
+                            {{-- <td class="text-left">{{ $data->pendidikan }}</td>
                             <td class="text-left">{{ $data->pengalaman }}</td>
                             <td class="text-left">{{ $data->status }}</td>
-                            <td class="text-left">{{ $data->usia }}</td>
+                            <td class="text-left">{{ $data->usia }}</td> --}}
                             <td>
                                 <div class="btn-group" role="group">
-                                    <a data-toggle="tooltip" data-placement="bottom" title="Edit Data" href="{{ url('Alternatif/edit/'.$data->id_alternatif) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                    <a data-toggle="tooltip" data-placement="bottom" title="Hapus Data" href="{{ url('Alternatif/destroy/'.$data->id_alternatif) }}" onclick="return confirm('Apakah anda yakin untuk menghapus data ini')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a data-toggle="tooltip" data-placement="bottom" title="Edit Data"
+                                        href="{{ url('Alternatif/edit/' . $data->id_alternatif) }}"
+                                        class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a data-toggle="tooltip" data-placement="bottom" title="Hapus Data"
+                                        href="{{ url('Alternatif/destroy/' . $data->id_alternatif) }}"
+                                        onclick="return confirm('Apakah anda yakin untuk menghapus data ini')"
+                                        class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </div>
                             </td>
                         </tr>

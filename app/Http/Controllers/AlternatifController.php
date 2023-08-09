@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\AlternatifModel;
+use App\Models\KriteriaModel;
 use Exception;
 
 class AlternatifController extends Controller
@@ -55,7 +56,9 @@ class AlternatifController extends Controller
             <?php
         }
 
+        
         $data['page'] = "Alternatif";
+        $data['kriteria'] = KriteriaModel::all();
         return view('alternatif.tambah', $data);
     }
 
@@ -78,17 +81,15 @@ class AlternatifController extends Controller
 
         $data = [
             'nama' => $request->nama,
-            'usia' => $request->usia,
             'sanggar' => $request->sanggar,
-            'status' => $request->status,
-            'pengalaman' => $request->pengalaman,
-            'pendidikan' => $request->pendidikan,
             'daerah_tari' => $request->daerah_tari,
             'jumlah_pilihan' => $request->jumlah_pilihan,
             'biaya' => $request->biaya,
             'no_telp' => $request->no_telp
-
         ];
+
+
+        // dd($data);
 
         $result = AlternatifModel::create($data);
 
