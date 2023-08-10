@@ -28,7 +28,15 @@
                 </div>
                 <div class="form-group col-md-12">
                     <label class="font-weight-bold">Sanggar Tari Tradisional</label>
-                    <input autocomplete="off" type="text" name="sanggar" required class="form-control" />
+                    <select name="sanggar" id="" class="form-control">
+                        <option value=""></option>
+                        <option value="Sanggar Ayodya Pala">Sanggar Ayodya Pala</option>
+                        <option value="Sanggar Larasati">Sanggar Larasati</option>
+                        <option value="Sanggar Seni Kartika">Sanggar Seni Kartika</option>
+                        <option value="Sanggar Tari Esti">Sanggar Tari Esti</option>
+                        <option value="Sanggar Tari CantiQ">Sanggar Tari CantiQ</option>
+                        <option value="Sanggar Retno Puspita">Sanggar Retno Puspita</option>
+                    </select>
                 </div>
                 <div class="form-group col-md-12">
                     <label class="font-weight-bold">Daerah Tari Tradisional</label>
@@ -47,28 +55,6 @@
                     <input autocomplete="off" type="number" name="no_telp" placeholder="085xxxxx" required
                         class="form-control" />
                 </div>
-                {{-- <div class="form-group col-md-12">
-                    @foreach ($kriteria as $key)
-                        @php
-                            $sub_kriteria = \App\Models\SubKriteriaModel::data_sub_kriteria($key->id_kriteria);
-                        @endphp
-                        @if ($sub_kriteria != null)
-                            <input type="hidden" name="id_alternatif" value="{{ $key->id_alternatif }}">
-                            <input type="hidden" name="id_kriteria[]" value="{{ $key->id_kriteria }}">
-                            <div class="form-group">
-                                <label class="font-weight-bold"
-                                    for="{{ $key->id_kriteria }}">{{ $key->keterangan }}</label>
-                                <select name="nilai[]" class="form-control" id="{{ $key->id_kriteria }}" required>
-                                    <option value="">--Pilih--</option>
-                                    @foreach ($sub_kriteria as $subs_kriteria)
-                                        <option value="{{ $subs_kriteria['id_sub_kriteria'] }}">
-                                            {{ $subs_kriteria['deskripsi'] }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        @endif
-                    @endforeach
-                </div> --}}
             </div>
         </div>
         <div class="card-footer text-right">

@@ -10,11 +10,7 @@ class AlternatifModel extends Model
     protected $primaryKey = 'id_alternatif';
     protected $fillable = [
         'nama',
-        'usia',
         'sanggar',
-        'status',
-        'pengalaman',
-        'pendidikan',
         'daerah_tari',
         'jumlah_pilihan',
         'biaya',
