@@ -25,9 +25,10 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-5 col-md-5 mt-5"><br><br>
+            <div class="col-xl-5 col-lg-5 col-md-5 mt-5">
                 <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Sistem Pendukung Keputusan</h1>
+                    {{-- <h1 class="h4 text-gray-900 mb-4">Sistem Pendukung Keputusan</h1> --}}
+                    <img src="{{ asset('img/logo_temulatih.png') }}" alt="Logo" width="150" height="150">
                 </div>
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -37,7 +38,7 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang </h1>
                                     </div>
                                     @if (session('message'))
                                         <div class="alert alert-danger alert-dismissable">

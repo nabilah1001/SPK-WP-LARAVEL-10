@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\LoginModel;
 use Illuminate\Support\Facades\Session;
+use App\Models\AlternatifModel;
+use App\Models\KriteriaModel;
+use App\Models\PenilaianModel;
+// use App\Models\HasilModel;
 
 class LoginController extends Controller
 {
@@ -47,13 +51,27 @@ class LoginController extends Controller
         return redirect()->route('login');
     }
 
-    public function Dashboard() // Renamed the method to lowercase "dashboard"
+    public function Dashboard()
     {
         if (session('log.status') == 'Logged') {
             $data['page'] = "Dashboard";
+
+            // Menghitung jumlah data dari tabel Alternatif
+            $data['jumlahAlternatif'] = AlternatifModel::count();
+
+            // Menghitung jumlah data dari tabel Kriteria
+            $data['jumlahKriteria'] = KriteriaModel::count();
+
+            // Menghitung jumlah data dari tabel Penilaian
+            $data['jumlahPenilaian'] = PenilaianModel::count();
+
+            // Menghitung jumlah data dari tabel Hasil
+            // $data['jumlahHasil'] = HasilModel::count();
+
             return view('dashboard', $data);
         } else {
             return redirect()->route('login');
         }
     }
+
 }
