@@ -16,10 +16,11 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
     <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/logo_temulatih.png') }}" type="image">
+    <link rel="icon" href="{{ asset('img/logo_temulatih.png') }}" type="image">
 </head>
 
 <body id="page-top">
@@ -29,10 +30,19 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('Dashboard') }}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-database"></i>
+                <div class="sidebar-brand-icon">
+                    <!-- <img src="img/logo_temulatih.png" alt="logo-img"> -->
                 </div>
-                <div class="sidebar-brand-text mx-3">SPK WP</div>
+                <div class="sidebar-brand-text">Temu Latih</div>
+
+                <!--
+                <div class="sidebar-brand">
+                    <div class="sidebar-brand-icon">
+                        <img src="path/to/your/image.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="sidebar-brand-text">Temu Latih</div>
+                </div>
+                -->
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">

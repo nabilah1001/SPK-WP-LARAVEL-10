@@ -1,0 +1,15 @@
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-img {
+    width: 40px; /* Sesuaikan ukuran lebar yang diinginkan */
+    height: auto; /* Biarkan tinggi menyesuaikan agar gambar tidak terdistorsi */
+    margin-right: 10px; /* Atur margin antara logo dan teks */
+}
+
+.sidebar-brand-text {
+    font-size: 1.5rem; /* Sesuaikan ukuran font yang diinginkan */
+}
