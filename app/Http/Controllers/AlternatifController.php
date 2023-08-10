@@ -134,11 +134,21 @@ class AlternatifController extends Controller
         }
 
         $this->validate($request, [
-            'nama' => 'required'
+            'nama' => 'required',
+            'sanggar' => 'required',
+            'daerah_tari' => 'required',
+            'jumlah_pilihan' => 'required',
+            'biaya' => 'required',
+            'no_telp' => 'required',
         ]);
 
         $data = [
-            'nama' => $request->nama
+            'nama' => $request->nama,
+            'sanggar' => $request->sanggar,
+            'daerah_tari' => $request->daerah_tari,
+            'jumlah_pilihan' => $request->jumlah_pilihan,
+            'biaya' => $request->biaya,
+            'no_telp' => $request->no_telp
         ];
 
         $alternatif = AlternatifModel::findOrFail($id_alternatif);
