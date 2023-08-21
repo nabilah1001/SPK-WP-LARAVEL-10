@@ -47,6 +47,7 @@
                                     <a data-toggle="tooltip" data-placement="bottom" title="Edit Data"
                                         href="{{ url('Alternatif/edit/' . $data->id_alternatif) }}"
                                         class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                        
                                     <a data-toggle="tooltip" data-placement="bottom" title="Hapus Data"
                                         href="{{ url('Alternatif/destroy/' . $data->id_alternatif) }}"
                                         onclick="return confirm('Apakah anda yakin untuk menghapus data ini')"

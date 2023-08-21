@@ -3,8 +3,8 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-users"></i> Data Alternatif</h1>
 
-    <a href="{{ url('Alternatif') }}" class="btn btn-secondary btn-icon-split"><span class="icon text-white-50"><i
-                class="fas fa-arrow-left"></i></span>
+    <a href="{{ url('Alternatif') }}" class="btn btn-secondary btn-icon-split"><span class="icon text-white-50">
+        <i class="fas fa-arrow-left"></i></span>
         <span class="text">Kembali</span>
     </a>
 </div>

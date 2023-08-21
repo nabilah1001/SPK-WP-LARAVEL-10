@@ -28,8 +28,10 @@ class PerhitunganModel extends Model
 
     // Add data to database 'hasil'
     public static function get_hasil()
-    {
+    {   
         $result = DB::table('hasil AS h')
+                ->orderBy('nilai', 'desc') // Urutkan dari terbesar ke terkecil berdasarkan nilai
+
                 ->select('h.id_hasil', 'h.id_alternatif', 'h.nilai', 'a.nama', 
                     'sk1.deskripsi AS usia', 'a.sanggar', 'sk3.deskripsi AS status', 
                     'sk2.deskripsi AS pengalaman', 'sk4.deskripsi AS pendidikan', 
