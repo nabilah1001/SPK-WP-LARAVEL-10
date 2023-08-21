@@ -29,24 +29,23 @@
                     <label class="font-weight-bold">Sanggar Tari Tradisional</label>
                     <select name="sanggar" class="form-control">
                         <option value="">Pilih Sanggar</option>
-                        <option value="Sanggar Ayodya Pala"
-                            {{ $alternatif->sanggar === 'Sanggar Ayodya Pala' ? 'selected' : '' }}>Sanggar Ayodya Pala
+                        <option value="Sanggar Tari Ayodya Pala (Depok)"
+                            {{ $alternatif->sanggar === 'Sanggar Tari Ayodya Pala (Depok)' ? 'selected' : '' }}>Sanggar Tari Ayodya Pala (Depok)
                         </option>
-                        <option value="Sanggar Larasati"
-                            {{ $alternatif->sanggar === 'Sanggar Larasati' ? 'selected' : '' }}>Sanggar Larasati
+                        <option value="Sanggar Seni Kartika Depok"
+                            {{ $alternatif->sanggar === 'Sanggar Seni Kartika Depok' ? 'selected' : '' }}>Sanggar Seni Kartika Depok
                         </option>
-                        <option value="Sanggar Seni Kartika"
-                            {{ $alternatif->sanggar === 'Sanggar Seni Kartika' ? 'selected' : '' }}>Sanggar Seni Kartika
+                        <option value="Sanggar Tari Larasati"
+                            {{ $alternatif->sanggar === 'Sanggar Tari Larasati' ? 'selected' : '' }}>Sanggar Tari Larasati
                         </option>
-                        <option value="Sanggar Tari Esti"
-                            {{ $alternatif->sanggar === 'Sanggar Tari Esti' ? 'selected' : '' }}>Sanggar Tari Esti
+                        <option value="Sanggar Tari Retno Puspita"
+                            {{ $alternatif->sanggar === 'Sanggar Tari Retno Puspita' ? 'selected' : '' }}>Sanggar Tari Retno Puspita
                         </option>
-                        <option value="Sanggar Tari CantiQ"
-                            {{ $alternatif->sanggar === 'Sanggar Tari CantiQ' ? 'selected' : '' }}>Sanggar Tari CantiQ
+                        <option value="Sanggar Tari Wulandari"
+                            {{ $alternatif->sanggar === 'Sanggar Tari Wulandari' ? 'selected' : '' }}>Sanggar Tari Wulandari
                         </option>
-                        <option value="Sanggar Retno Puspita"
-                            {{ $alternatif->sanggar === 'Sanggar Retno Puspita' ? 'selected' : '' }}>Sanggar Retno
-                            Puspita</option>
+                        <option value="Sanggar Seni Tari Essy"
+                            {{ $alternatif->sanggar === 'Sanggar Seni Tari Essy' ? 'selected' : '' }}>Sanggar Seni Tari Essy</option>
                     </select>
                 </div>
 

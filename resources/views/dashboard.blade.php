@@ -73,7 +73,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{ url('Alternatif') }}"
-                                        class="text-secondary text-decoration-none">Data Alternatif</a></div>
+                                        class="text-secondary text-decoration-none">Data Pelatih Tari Tradisional</a></div>
                                 <span class="text-gray-900" style="font-size: 1.2em;">{{ $jumlahAlternatif }}</span>
                             </div>
                             <div class="col-auto">

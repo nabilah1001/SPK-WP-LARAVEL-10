@@ -30,12 +30,12 @@
                     <label class="font-weight-bold">Sanggar Tari Tradisional</label>
                     <select name="sanggar" id="" class="form-control">
                         <option value=""></option>
-                        <option value="Sanggar Ayodya Pala">Sanggar Ayodya Pala</option>
-                        <option value="Sanggar Larasati">Sanggar Larasati</option>
-                        <option value="Sanggar Seni Kartika">Sanggar Seni Kartika</option>
-                        <option value="Sanggar Tari Esti">Sanggar Tari Esti</option>
-                        <option value="Sanggar Tari CantiQ">Sanggar Tari CantiQ</option>
-                        <option value="Sanggar Retno Puspita">Sanggar Retno Puspita</option>
+                        <option value="Sanggar Ayodya Pala">Sanggar Tari Ayodya Pala (Depok) </option>
+                        <option value="Sanggar Seni Kartika Depok">Sanggar Seni Kartika Depok</option>
+                        <option value="Sanggar Tari Larasati">Sanggar Tari Larasati</option>
+                        <option value="Sanggar Tari Retno Puspita">Sanggar Tari Retno Puspita</option>
+                        <option value="Sanggar Tari Wulandari">Sanggar Tari Wulandari</option>
+                        <option value="Sanggar Seni Tari Essy">Sanggar Seni Tari Essy</option>
                     </select>
                 </div>
                 <div class="form-group col-md-12">

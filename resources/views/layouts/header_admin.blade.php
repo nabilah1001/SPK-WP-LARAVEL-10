@@ -73,7 +73,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data Sistem Pendukung Keputusan
+                Sistem Pendukung Keputusan
             </div>
 
             @if (session('log.id_user_level') == '1')
@@ -134,7 +134,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data Pengelola Website
+                Pengelola Dashboard
             </div>
 
             @if (session('log.id_user_level') == '1')
