@@ -20,7 +20,7 @@
                                     Selamat datang, {{ session('log.nama') }} <span class="fw-bold"> </span>
                                     <span class="fw-bold">
                                     </span>!
-                                    Disini Anda dapat menentukan data alternatif, kriteria, sub kriteria, hasi
+                                    Disini Anda dapat menentukan data pelatih tari tradisional (alternatif), kriteria, sub kriteria, hasil
                                     perhitungan sehingga memperlolah hasil akhir dengan metode SPK WP dengan baik.
                                 </p>
 

@@ -22,6 +22,27 @@
                         <th width="15%">Ranking</th>
                     </tr>
                 </thead>
+
+                {{-- <tbody>
+                    @php
+                        $no = 1;
+                        // Menggunakan usort untuk mengurutkan array berdasarkan nilai secara descending
+                        usort($hasil, function($a, $b) {
+                            return $b->nilai - $a->nilai;
+                        });
+                    @endphp
+                    @foreach ($hasil as $keys)
+                    <tr align="center">
+                        <td align="left">{{ $keys->nama }}</td>
+                        <td>{{ $keys->nilai }}</td>
+                        <td>{{ $no }}</td>
+                    </tr>
+                    @php
+                        $no++;
+                    @endphp
+                    @endforeach
+                </tbody> --}}
+                
                 <tbody>
                     @php
                         $no = 1;

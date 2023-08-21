@@ -77,6 +77,13 @@
             </div>
 
             @if (session('log.id_user_level') == '1')
+                <li class="nav-item {{ $page == 'Alternatif' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ url('Alternatif') }}">
+                        <i class="fas fa-fw fa-users"></i>
+                        <span>Data Pelatih Tari</span>
+                    </a>
+                </li>
+            
                 <li class="nav-item {{ $page == 'Kriteria' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('Kriteria') }}">
                         <i class="fas fa-fw fa-cube"></i>
@@ -88,13 +95,6 @@
                     <a class="nav-link" href="{{ url('SubKriteria') }}">
                         <i class="fas fa-fw fa-cubes"></i>
                         <span>Data Sub Kriteria</span>
-                    </a>
-                </li>
-
-                <li class="nav-item {{ $page == 'Alternatif' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ url('Alternatif') }}">
-                        <i class="fas fa-fw fa-users"></i>
-                        <span>Data Alternatif</span>
                     </a>
                 </li>
 
