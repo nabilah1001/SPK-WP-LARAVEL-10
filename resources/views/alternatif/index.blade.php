@@ -1,7 +1,7 @@
 @include('layouts.header_admin')
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-users"></i> Data Alternatif</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-users"></i> Data Pelatih Tari (Alternatif)</h1>
 
     <a href="{{ url('Alternatif/tambah') }}" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Data </a>
 </div>
@@ -13,7 +13,7 @@
 <div class="card shadow mb-4">
     <!-- /.card-header -->
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-table"></i> Daftar Data Alternatif</h6>
+        <h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-table"></i> Daftar Data Pelatih Tari</h6>
     </div>
 
     <div class="card-body">
@@ -23,10 +23,7 @@
                     <tr align="center">
                         <th width="5%">No</th>
                         <th>Nama</th>
-                        {{-- <th>R.Pend</th>
-                        <th>Pengalaman</th>
-                        <th>Status</th>
-                        <th>Usia</th> --}}
+                        <th>Sanggar Tari</th>
                         <th width="15%">Aksi</th>
                     </tr>
                 </thead>
@@ -38,12 +35,13 @@
                         <tr align="center">
                             <td>{{ $no }}</td>
                             <td class="text-left">{{ $data->nama }}</td>
-                            {{-- <td class="text-left">{{ $data->pendidikan }}</td>
-                            <td class="text-left">{{ $data->pengalaman }}</td>
-                            <td class="text-left">{{ $data->status }}</td>
-                            <td class="text-left">{{ $data->usia }}</td> --}}
+                            <td class="text-left">{{ $data->sanggar }}</td>
                             <td>
                                 <div class="btn-group" role="group">
+                                    <a data-toggle="tooltip" data-placement="bottom" title="Lihat Detail"
+                                        href="{{ url('Alternatif/view/' . $data->id_alternatif) }}"
+                                        class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+
                                     <a data-toggle="tooltip" data-placement="bottom" title="Edit Data"
                                         href="{{ url('Alternatif/edit/' . $data->id_alternatif) }}"
                                         class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>

@@ -176,4 +176,28 @@ class AlternatifController extends Controller
         return redirect('Alternatif');
     }
 
+    // Add new code untuk View data
+    public function view(Request $request, $id_alternatif)
+    {
+        $id_user_level = session('log.id_user_level');
+        
+        if ($id_user_level != 1) {
+            ?>
+            <script>
+                window.location='<?php echo url("Dashboard"); ?>'
+                alert('Anda tidak berhak mengakses halaman ini!');
+            </script>
+            <?php
+        }
+
+        $alternatif = AlternatifModel::findOrFail($id_alternatif);
+
+        $page = "Alternatif"; // Definisikan variabel $page di sini
+
+        // Mengirimkan data alternatif dan variabel $page ke view
+        return view('alternatif.view', compact('alternatif', 'page'));
+    }
+
+
+
 }
