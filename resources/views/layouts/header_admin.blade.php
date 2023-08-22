@@ -45,18 +45,9 @@
                     }
                 </style>
 
-
-                <div class="sidebar-brand-text">Temu Latih</div>
-
-                <!--
-                <div class="sidebar-brand">
-                    <div class="sidebar-brand-icon">
-                        <img src="path/to/your/image.png" alt="Logo" class="logo-img">
-                    </div>
-                    <div class="sidebar-brand-text">Temu Latih</div>
-                </div>
-                -->
+                <div class="sidebar-brand-text" style="font-size: 18px; margin-left: 10px;"">Temu Latih</div>
             </a>
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
