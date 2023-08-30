@@ -198,6 +198,4 @@ class AlternatifController extends Controller
         return view('alternatif.view', compact('alternatif', 'page'));
     }
 
-
-
 }

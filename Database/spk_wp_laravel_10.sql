@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2023 at 02:09 PM
+-- Generation Time: Aug 30, 2023 at 06:10 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,20 +29,44 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `alternatif` (
   `id_alternatif` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL
+  `nama` varchar(100) NOT NULL,
+  `sanggar` varchar(50) NOT NULL,
+  `daerah_tari` varchar(50) NOT NULL,
+  `jumlah_pilihan` int(4) NOT NULL,
+  `biaya` varchar(50) NOT NULL,
+  `no_telp` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `alternatif`
 --
 
-INSERT INTO `alternatif` (`id_alternatif`, `nama`) VALUES
-(25, 'Axioo - Neon TNW C825'),
-(26, 'Axioo Neon TNNC 825'),
-(27, 'Acer Aspire E5-551'),
-(28, 'Lenovo Ideapad 100'),
-(29, 'Toshiba S40 A'),
-(30, 'HP 14-G1024 U');
+INSERT INTO `alternatif` (`id_alternatif`, `nama`, `sanggar`, `daerah_tari`, `jumlah_pilihan`, `biaya`, `no_telp`) VALUES
+(25, 'Sekar Wiraningrum', 'Sanggar Seni Kartika Depok', 'Seluruh daerah Indonesia', 11, '400000', '087873383035'),
+(26, 'Denok Kartika Wulandari, S. Sn', 'Sanggar Seni Kartika Depok', 'Seluruh daerah Indonesia', 22, '500000', '082123014543'),
+(27, 'Amadea Saraswati', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 17, '1000000', '081806081001'),
+(28, 'Farahnia Destanty Kusuma', 'Sanggar Tari Larasati', 'Seluruh daerah Indonesia, mayoritas Betawi', 23, '100000', '081514371370'),
+(29, 'Fatimah Rizkyanti Kusuma', 'Sanggar Tari Larasati', 'Jawa, Jakarta, Sumatera, Aceh, Kalimantan, Papua', 9, '100000', '0895320192959'),
+(30, 'Indah kusumawardani', 'Sanggar Tari Larasati', 'Jawa, DKI Jakarta, Sumatera, Aceh, Kalimantan', 18, '200000', '085884242010'),
+(32, 'Essy Lusiana', 'Sanggar Seni Tari Essy', 'Jawa Barat, Jawa Tengah, Betawi', 21, '500000', '085880903692'),
+(33, 'Alya Nur Ajie', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 9, '100000', '089673285495'),
+(34, 'Nadengan', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 18, '300000', '082258454193'),
+(35, 'Citra Cahyani Sumirat', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 10, '300000', '081514371370'),
+(42, 'Lia Afallia', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 25, '150000', '089673285495'),
+(43, 'Vemiana Utami', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 23, '400000', '081806081001'),
+(44, 'Adella Putri', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 10, '100000', '081514371370'),
+(45, 'Yuli Kumalasari', 'Sanggar Tari Wulandari', 'Jawa Barat', 10, '100000', '089673285495'),
+(46, 'Siska Susanti', 'Sanggar Tari Wulandari', 'Jawa Barat', 18, '150000', '0895320192959'),
+(47, 'Kemas Fauzan', 'Sanggar Tari Larasati', 'Seluruh daerah Indonesia', 10, '250000', '081514371370'),
+(48, 'Bella Selviana', 'Sanggar Tari Ayodya Pala (Depok)', 'DKI Jakarta', 17, '250000', '085886595046'),
+(49, 'Heni Novianty', 'Sanggar Tari Larasati', 'Jawa Barat, DKI Jakarta', 20, '150000', '081514371370'),
+(50, 'Valda Haibah', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 18, '150000', '087873383035'),
+(52, 'Cahyani', 'Sanggar Tari Retno Puspita', 'Jawa, Kalimantan, Sumatera Barat', 10, '150000', '081806081001'),
+(53, 'Luliana', 'Sanggar Tari Retno Puspita', 'Jawa Barat, Jawa Tengah, Sumatera Barat', 18, '250000', '0895320192959'),
+(54, 'Norma Silvia', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 16, '100000', '081806081001'),
+(55, 'Jasmine Putri', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 10, '100000', '089673285495'),
+(56, 'Putri Amelia', 'Sanggar Tari Ayodya Pala (Depok)', 'Seluruh daerah Indonesia', 30, '500000', '082123014543'),
+(57, 'Ayuna Langit', 'Sanggar Tari Retno Puspita', 'Seluruh daerah Indonesia', 150000, '10', '081806081001');
 
 -- --------------------------------------------------------
 
@@ -61,12 +85,31 @@ CREATE TABLE `hasil` (
 --
 
 INSERT INTO `hasil` (`id_hasil`, `id_alternatif`, `nilai`) VALUES
-(1, 25, 0.12262),
-(2, 26, 0.220761),
-(3, 27, 0.174378),
-(4, 28, 0.145821),
-(5, 29, 0.150784),
-(6, 30, 0.185637);
+(1, 25, 0.0397217),
+(2, 26, 0.0491824),
+(3, 27, 0.0442499),
+(4, 28, 0.0409055),
+(5, 29, 0.0361077),
+(6, 30, 0.0457953),
+(7, 32, 0.051408),
+(8, 33, 0.0423341),
+(9, 34, 0.0429694),
+(10, 35, 0.0287559),
+(11, 42, 0.0393777),
+(12, 43, 0.0406106),
+(13, 44, 0.0347828),
+(14, 45, 0.0361077),
+(15, 46, 0.0390598),
+(16, 47, 0.0351731),
+(17, 48, 0.0397217),
+(18, 49, 0.0422533),
+(19, 50, 0.040424),
+(20, 52, 0.031107),
+(21, 53, 0.0339861),
+(22, 54, 0.0320925),
+(23, 55, 0.033609),
+(24, 56, 0.0560149),
+(25, 57, 0.0442499);
 
 -- --------------------------------------------------------
 
@@ -87,11 +130,10 @@ CREATE TABLE `kriteria` (
 --
 
 INSERT INTO `kriteria` (`id_kriteria`, `keterangan`, `kode_kriteria`, `bobot`, `jenis`) VALUES
-(25, 'Prosesor', 'C1', 5, 'Benefit'),
-(26, 'RAM', 'C2', 4, 'Benefit'),
-(27, 'Harddisk', 'C3', 3, 'Benefit'),
-(28, 'VGA', 'C4', 5, 'Benefit'),
-(29, 'Harga', 'C5', 3, 'Cost');
+(25, 'Riwayat pendidikan tari', 'C1', 5, 'Benefit'),
+(26, 'Lama pengalaman mengajar', 'C2', 4, 'Benefit'),
+(27, 'Status pelatih', 'C3', 2, 'Benefit'),
+(28, 'Usia', 'C4', 2, 'Cost');
 
 -- --------------------------------------------------------
 
@@ -111,36 +153,106 @@ CREATE TABLE `penilaian` (
 --
 
 INSERT INTO `penilaian` (`id_penilaian`, `id_alternatif`, `id_kriteria`, `nilai`) VALUES
-(150, 25, 25, 107),
-(151, 25, 26, 113),
-(152, 25, 27, 116),
-(153, 25, 28, 122),
-(154, 25, 29, 124),
+(150, 25, 25, 106),
+(152, 25, 27, 114),
 (155, 26, 25, 105),
-(156, 26, 26, 110),
-(157, 26, 27, 116),
-(158, 26, 28, 122),
-(159, 26, 29, 127),
-(160, 27, 25, 108),
+(156, 26, 26, 109),
+(157, 26, 27, 114),
 (161, 27, 26, 111),
-(162, 27, 27, 115),
+(162, 27, 27, 114),
 (163, 27, 28, 119),
-(164, 27, 29, 125),
-(165, 28, 25, 105),
-(166, 28, 26, 113),
-(167, 28, 27, 116),
-(168, 28, 28, 122),
-(169, 28, 29, 124),
-(170, 29, 25, 105),
-(171, 29, 26, 113),
-(172, 29, 27, 116),
-(173, 29, 28, 122),
-(174, 29, 29, 125),
-(175, 30, 25, 105),
-(176, 30, 26, 113),
-(177, 30, 27, 116),
-(178, 30, 28, 122),
-(179, 30, 29, 128);
+(165, 28, 25, 104),
+(167, 28, 27, 115),
+(170, 29, 25, 104),
+(172, 29, 27, 115),
+(175, 30, 25, 104),
+(177, 30, 27, 114),
+(180, 25, 26, 110),
+(181, 25, 28, 119),
+(182, 26, 28, 120),
+(183, 27, 25, 104),
+(184, 28, 26, 111),
+(185, 28, 28, 119),
+(186, 32, 25, 105),
+(187, 32, 26, 109),
+(188, 32, 27, 114),
+(189, 32, 28, 121),
+(190, 30, 26, 111),
+(191, 30, 28, 120),
+(192, 33, 25, 104),
+(193, 33, 26, 111),
+(194, 33, 27, 115),
+(195, 33, 28, 120),
+(196, 34, 25, 106),
+(197, 34, 26, 110),
+(198, 34, 27, 114),
+(199, 34, 28, 121),
+(200, 35, 25, 107),
+(201, 35, 26, 111),
+(202, 35, 27, 115),
+(203, 35, 28, 119),
+(204, 29, 26, 112),
+(205, 29, 28, 119),
+(206, 42, 25, 107),
+(207, 42, 26, 109),
+(208, 42, 27, 114),
+(209, 42, 28, 121),
+(210, 43, 25, 105),
+(211, 43, 26, 111),
+(212, 43, 27, 114),
+(213, 43, 28, 119),
+(214, 44, 25, 106),
+(215, 44, 26, 111),
+(216, 44, 27, 115),
+(217, 44, 28, 120),
+(218, 45, 25, 104),
+(219, 45, 26, 112),
+(220, 45, 27, 115),
+(221, 45, 28, 119),
+(222, 46, 25, 104),
+(223, 46, 26, 112),
+(224, 46, 27, 114),
+(225, 46, 28, 119),
+(226, 47, 25, 107),
+(227, 47, 26, 110),
+(228, 47, 27, 114),
+(229, 47, 28, 120),
+(230, 48, 25, 106),
+(231, 48, 26, 110),
+(232, 48, 27, 114),
+(233, 48, 28, 119),
+(234, 49, 25, 104),
+(235, 49, 26, 112),
+(236, 49, 27, 114),
+(237, 49, 28, 121),
+(238, 50, 25, 104),
+(239, 50, 26, 112),
+(240, 50, 27, 114),
+(241, 50, 28, 120),
+(242, 52, 25, 107),
+(243, 52, 26, 111),
+(244, 52, 27, 114),
+(245, 52, 28, 119),
+(246, 53, 25, 107),
+(247, 53, 26, 110),
+(248, 53, 27, 114),
+(249, 53, 28, 119),
+(250, 54, 25, 106),
+(251, 54, 26, 110),
+(252, 54, 27, 116),
+(253, 54, 28, 120),
+(254, 55, 25, 106),
+(255, 55, 26, 111),
+(256, 55, 27, 115),
+(257, 55, 28, 119),
+(258, 56, 25, 104),
+(259, 56, 26, 109),
+(260, 56, 27, 114),
+(261, 56, 28, 121),
+(262, 57, 25, 104),
+(263, 57, 26, 111),
+(264, 57, 27, 114),
+(265, 57, 28, 119);
 
 -- --------------------------------------------------------
 
@@ -160,31 +272,20 @@ CREATE TABLE `sub_kriteria` (
 --
 
 INSERT INTO `sub_kriteria` (`id_sub_kriteria`, `id_kriteria`, `deskripsi`, `nilai`) VALUES
-(104, 25, 'Sangat Tinggi', 5),
-(105, 25, 'Tinggi', 4),
-(106, 25, 'Sedang', 3),
-(107, 25, 'Rendah', 2),
-(108, 25, 'Sangat Rendah', 1),
-(109, 26, '16 GB', 5),
-(110, 26, '8 GB ', 4),
-(111, 26, '4 GB', 3),
-(112, 26, '2 GB', 2),
-(113, 26, '1 GB', 1),
-(114, 27, '>750 GB ', 5),
-(115, 27, '750 GB', 4),
-(116, 27, '500 GB', 3),
-(117, 27, '320 GB', 2),
-(118, 27, '250 GB ', 1),
-(119, 28, 'Sangat Tinggi', 5),
-(120, 28, 'Tinggi', 4),
-(121, 28, 'Sedang', 3),
-(122, 28, 'Rendah', 2),
-(123, 28, 'Sangat Rendah', 1),
-(124, 29, '> 15 Jt', 5),
-(125, 29, '8 – 15 Jt', 4),
-(126, 29, '6 – 8 Jt', 3),
-(127, 29, '4 – 6 Jt', 2),
-(128, 29, '3 – 4 Jt', 1);
+(104, 25, 'Lulusan sanggar tari', 5),
+(105, 25, 'Lulusan D3/D4/S1 Seni Tari', 4),
+(106, 25, 'Lulusan sanggar luar', 3),
+(107, 25, 'Estrakulikuler atau organisasi seni', 2),
+(109, 26, '> 10 tahun', 5),
+(110, 26, '6 - 10 tahun', 4),
+(111, 26, '2 - 5 tahun', 3),
+(112, 26, '< 2 tahun', 2),
+(114, 27, 'Pelatih', 5),
+(115, 27, 'Asisten Pelatih', 3),
+(116, 27, 'Magang', 1),
+(119, 28, '< 25 tahun', 5),
+(120, 28, '25 - 35 tahun', 4),
+(121, 28, '> 35 tahun', 3);
 
 -- --------------------------------------------------------
 
@@ -207,7 +308,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `id_user_level`, `nama`, `email`, `username`, `password`) VALUES
 (1, 1, 'Admin', 'admin@gmail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(7, 2, 'User', 'user@gmail.com', 'user', 'ee11cbb19052e40b07aac0ca060c23ee');
+(7, 2, 'User', 'user@gmail.com', 'user', 'ee11cbb19052e40b07aac0ca060c23ee'),
+(10, 1, 'Nabilah Azzahra Nasution', 'nabilah.azzahra@gmail.com', 'nabilahazz', '63f773dc3b1c5ef5c1e16a095f8d57ee');
 
 -- --------------------------------------------------------
 
@@ -288,25 +390,25 @@ ALTER TABLE `user_level`
 -- AUTO_INCREMENT for table `alternatif`
 --
 ALTER TABLE `alternatif`
-  MODIFY `id_alternatif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_alternatif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `hasil`
 --
 ALTER TABLE `hasil`
-  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
-  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `penilaian`
 --
 ALTER TABLE `penilaian`
-  MODIFY `id_penilaian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `id_penilaian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=266;
 
 --
 -- AUTO_INCREMENT for table `sub_kriteria`
@@ -318,7 +420,7 @@ ALTER TABLE `sub_kriteria`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user_level`
